@@ -1,6 +1,7 @@
 export const getSneaks = (brands) => {
   return brands.reduce((acc, brand) => {
-    brand.shoes.map((shoe) => acc.push(shoe));
+    // brand.shoes.map((shoe) => acc.push(shoe));
+    acc.push(...brand.shoes);
     return acc;
   }, []);
 
